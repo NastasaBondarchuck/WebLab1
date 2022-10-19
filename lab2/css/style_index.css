@@ -1,0 +1,108 @@
+body{
+    font-family: "Bookman Old Style", serif;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+header, footer{
+    display: flex;
+    background-color: darksalmon;
+    width: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 100px;
+}
+header{
+    justify-self: flex-start;
+}
+.header__label, .footer__label{
+    text-align: center;
+    font-family: "Brush Script MT", serif;
+}
+footer{
+    justify-self: flex-end;
+}
+
+
+main{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 800px;
+}
+.left__block{
+    background-color: antiquewhite;
+    flex: 0 0 auto;
+    width: 200px;
+    height: auto;
+    font-family: Gabriola, serif;
+    display: flex;
+    align-items: center;
+}
+.navigation__label{
+    font-size: 35px;
+    line-height: 100px;
+}
+a{
+    font-size: 20px;
+    text-decoration: none;
+    color: Maroon;
+}
+ul{
+    margin: 0;
+    padding: 0 15px;
+    text-align: left;
+    line-height: 28px;
+    list-style-type: none;
+    width: max-content;
+}
+
+
+
+.right__block{
+    flex: 1 1 auto;
+    width: auto;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+.upper__block{
+    background-color: SeaShell;
+    text-align: right;
+    flex: 0 1 auto;
+    font-size: 15px;
+    padding: 10px 15px;
+}
+.downer__block{
+    display: flex;
+    flex-direction: row;
+    flex: 1 0 auto;
+}
+.left__downer__block{
+    flex: 1 1 auto;
+    width: auto;
+    box-sizing: content-box;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+.label{
+    align-self: center;
+    font-size: 30px;
+}
+.right__downer__block{
+    background-color: antiquewhite;
+    flex: 0 0 auto;
+    width: 200px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.cat{
+    width: 75%;
+}
