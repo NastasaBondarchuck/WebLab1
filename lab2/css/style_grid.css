@@ -1,0 +1,112 @@
+body{
+    margin: 0;
+    font-family: "Bookman Old Style", serif;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: minmax(100px, auto) minmax(800px, 6fr) minmax(100px, auto);
+    grid-template-columns: 1fr;
+}
+
+.header, .footer{
+    display: grid;
+    grid-template: 1fr / max-content  10fr max-content;
+    background-color: darksalmon;
+    padding: 0 20px;
+}
+.header__label, .footer__label{
+    text-align: center;
+    font-family: "Brush Script MT", serif;
+    margin: auto;
+}
+.header__text{
+    grid-column: 3 / 4;
+    margin: auto;
+}
+.header__label{
+    grid-column: 1 / 2;
+}
+.footer__label{
+    grid-column: 3 / 4;
+}
+.footer__text{
+    grid-column: 1 / 2;
+    margin: auto;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 1fr;
+}
+.navigation__block{
+    background-color: antiquewhite;
+    font-family: Gabriola, serif;
+    display: grid;
+    grid-template: 1fr / 1fr;
+}
+.navigation__block__content{
+    margin: auto 0;
+}
+.navigation__label{
+    font-size: 35px;
+    line-height: 100px;
+}
+a{
+    font-size: 20px;
+    text-decoration: none;
+    color: Maroon;
+}
+ul{
+    margin: 0;
+    padding: 15px;
+    text-align: left;
+    line-height: 28px;
+    list-style-type: none;
+    width: max-content;
+}
+.central__block{
+    display: grid;
+    grid-template-rows: minmax(55px, auto) 1fr;
+    grid-template-columns: 1fr 220px;
+    grid-template-areas:
+        "up up"
+        "left right";
+}
+.upper__block{
+    grid-area: up;
+    background-color: SeaShell;
+    text-align: right;
+    font-size: 15px;
+    padding: 10px 15px;
+}
+.label{
+    text-align: center;
+    font-size: 30px;
+}
+.left__block{
+    text-align: left;
+    grid-area: left;
+    display: grid;
+    grid-template: 1fr / 1fr;
+    padding: 10px;
+}
+.left__block__content{
+    margin: auto;
+    box-sizing: content-box;
+}
+.right__block{
+    grid-area: right;
+    background-color: antiquewhite;
+    padding: 10px;
+    display: grid;
+    grid-template: 1fr / 1fr;
+}
+.right__block__content{
+    margin: auto;
+}
+.cat{
+    width: 75%;
+}
+

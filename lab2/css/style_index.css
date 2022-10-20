@@ -71,6 +71,7 @@ ul{
     background-color: SeaShell;
     text-align: right;
     flex: 0 1 auto;
+    min-height: 35px;
     font-size: 15px;
     padding: 10px 15px;
 }
@@ -88,7 +89,6 @@ ul{
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-
 }
 .label{
     align-self: center;
