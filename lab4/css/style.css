@@ -260,6 +260,9 @@ li:hover{
         grid-column: 3/4;
         margin: auto;
     }
+    .more__down:hover{
+        background-color: #D4D4D4;
+    }
 }
 @media (max-device-width: 400px){
     .image__1, .image__2, .image__3{
