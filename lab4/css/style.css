@@ -1,9 +1,13 @@
 body{
     margin: 0;
     font-family: "Arial", serif;
+    display: grid;
+    grid-template: 1fr / 1fr;
 }
 
-
+.container{
+    padding-left: 300px;
+}
 header{
     background-color: white;
     display: grid;
@@ -18,7 +22,7 @@ header{
     grid-area: search;
     grid-column: 1/2;
     display: flex;
-    padding-left: 320px;
+    padding-left: 20px;
 }
 .search__input{
     padding: 11px;
@@ -46,8 +50,8 @@ header{
     background: #D4D4D4;
     color: white;
 }
-.more{
-    grid-area: more;
+.more__up{
+    grid-area: more__up;
     grid-column: 3/4;
     width: min-content;
     display: flex;
@@ -58,13 +62,19 @@ header{
     padding: 5px;
     cursor: pointer;
 }
-.bar__1, .bar__2, .bar__3{
+.more__down{
+    display: none;
+}
+.bar__1, .bar__2, .bar__3, .bar__1d, .bar__2d, .bar__3d{
     background-color: #1F1F1F;
     width: 35px;
     height: 2px;
     margin: 5px;
 }
-.more:hover{
+.bar__1d, .bar__2d, .bar__3d{
+    background-color: #D4D4D4;
+}
+.more__up:hover{
     background-color: #D4D4D4;
 }
 
@@ -87,7 +97,6 @@ main{
     font-size: 75px;
     grid-column: 1/2;
     grid-row: 1/2;
-    padding-left: 300px;
     padding-top: 80px;
 }
 .main__text{
@@ -95,14 +104,12 @@ main{
     font-size: 18px;
     grid-column: 1/2;
     grid-row: 2/3;
-    padding-left: 300px;
 }
 .cards{
     grid-area: cards;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    padding-left: 300px;
     padding-bottom: 100px;
 }
 .card{
@@ -113,7 +120,7 @@ main{
     background-color: white;
     padding: 30px 15px;
     margin: 15px;
-    width: 340px;
+    width: 350px;
 }
 .card:hover{
     padding: 50px 15px;
@@ -137,11 +144,11 @@ main{
     padding: 0 0 20px 0;
 }
 .image__1, .image__2, .image__3{
-    width: 300px;
+    width: 310px;
 }
 
 footer{
-    height: 120px;
+    height: 150px;
     background-color: #1F1F1F;
     display: grid;
     grid-template: 1fr / max-content 1fr;
@@ -150,7 +157,7 @@ footer{
     grid-column: 1/2;
     display: flex;
     align-items: center;
-    padding-left: 320px;
+    padding-left: 20px;
 }
 .logo__image{
     height: 40%;
@@ -178,8 +185,99 @@ li:hover{
     color: #1F1F1F;
     background-color: #D4D4D4;
     font-size: 23px;
+    cursor: pointer;
 }
 
 @media (max-device-width: 800px){
+    .container{
+        padding: 0;
+    }
+    header{
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+    .search{
+        grid-row: 1/2;
+        grid-column: 1/2;
+        padding-left: 0;
+        margin: auto;
+        padding-top: 30px;
+    }
+    .search__input{
+        width: 300px;
+    }
+    .more__up{
+        grid-row: 2/3;
+        grid-column: 1/2;
+        margin: auto;
+    }
+    .more__down{
+        grid-column: 3/4;
+        width: min-content;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        justify-content: center;
+        background-color: transparent;
+        padding: 5px;
+        cursor: pointer;
+    }
 
+    main{
+        background: linear-gradient( 0deg, rgba(0,0,0,0.05), rgba(0,0,0,0.05)),
+        url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/13dbcc99bdb05229821033f4/fffmin.jpg)
+        center center / 400% no-repeat;
+    }
+    .upper__block{
+        grid-template: min-content min-content / 1fr;
+        padding: 0 100px;
+    }
+    .label{
+        padding: 80px 0 0;
+        font-size: 70px;
+    }
+    .main__text{
+        font-size: 23px;
+    }
+    .cards{
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+    }
+
+    footer{
+        height: 120px;
+        grid-template: 1fr / 1fr 1fr 1fr;
+    }
+    .logo{
+        padding-left: 0;
+        margin: auto;
+    }
+    .nav{
+        display: none;
+    }
+    .more__down{
+        grid-column: 3/4;
+        margin: auto;
+    }
+}
+@media (max-device-width: 400px){
+    .image__1, .image__2, .image__3{
+        width: 210px;
+    }
+    .card{
+         width: 250px;
+     }
+    .upper__block{
+        padding: 0 50px;
+    }
+    .label{
+        font-size: 45px;
+    }
+    .main__text, .card__text{
+        font-size: 18px;
+    }
+    .card__label{
+        font-size: 28px;
+    }
 }
