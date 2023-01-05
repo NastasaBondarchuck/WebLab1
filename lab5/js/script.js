@@ -44,6 +44,12 @@ function ConfirmReload(){
         }
     }
 }
+function GetCookies(name) {
+    let matches = document.cookie.match(new RegExp(
+        "(?:^|; )" + name.replace(/([.$?*|{}()\[\]\\\/+^])/g, '\\$1') + "=([^;]*)"
+    ));
+    return matches ? decodeURIComponent(matches[1]) : undefined;
+}
 
 //Task 4
 function MakeBold() {
@@ -66,7 +72,7 @@ function SetBoldness(){
 
 //Task 5
 function AddTableRow(blockName){
-    let row = document.createElement('tr');
+    let row = document.createElement('td');
     row.innerHTML = 'Another row of ' + blockName;
     row.className = blockName + "__row";
     document.getElementById(blockName).insertAdjacentElement("afterend", row);
@@ -75,7 +81,7 @@ function SaveTable(blockName){
     let rows = document.getElementsByClassName(blockName+'__row');
     let rows__string = "";
     for (let rowsKey of rows) {
-        rows__string += new XMLSerializer().serializeToString(rowsKey);
+        rows__string += "<tr>" + new XMLSerializer().serializeToString(rowsKey) + "</tr>" ;
     }
     localStorage.setItem(blockName, rows__string);
 }
@@ -88,15 +94,9 @@ function SetTables(){
     }
     for (const contentKey of content) {
         document.getElementById(contentKey).innerHTML = localStorage.getItem(contentKey);
-            // insertAdjacentElement("afterend", new DOMParser().parseFromString(localStorage.getItem(contentKey), 'text/html').getElementById(contentKey));
     }
 }
 
 
-function GetCookies(name) {
-    let matches = document.cookie.match(new RegExp(
-        "(?:^|; )" + name.replace(/([.$?*|{}()\[\]\\\/+^])/g, '\\$1') + "=([^;]*)"
-    ));
-    return matches ? decodeURIComponent(matches[1]) : undefined;
-}
+
 

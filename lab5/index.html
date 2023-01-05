@@ -26,16 +26,18 @@
                 </ul>
             </div>
             <div class="add__row">
-                <img class="add__row__img" src="img/add.png" alt="" width="50%" onmouseover="AddTableRow('navigation__block__content')">
-                <button class="save__table__button" onclick="SaveTable('navigation__block__content')">Save Table</button>
+                <table class="table__nav" id="table__nav"></table>
+                <img class="add__row__img" src="img/add.png" alt="" width="50%" onmouseover="AddTableRow('table__nav')">
+                <button class="save__table__button" onclick="SaveTable('table__nav')">Save Table</button>
             </div>
         </div>
         <div class="central__block">
             <div class="upper__block">
                 <div class="upper__block__content">“One cat just leads to another.”<br/>Ernest Hemingway</div>
                 <div class="add__row">
-                    <img class="add__row__img" src="img/add.png" alt="" width="10%" onmouseover="AddTableRow('upper__block__content')">
-                    <button class="save__table__button" onclick="SaveTable('upper__block__content')">Save Table</button>
+                    <table class="table__upper" id="table__upper"></table>
+                    <img class="add__row__img" src="img/add.png" alt="" width="10%" onmouseover="AddTableRow('table__upper')">
+                    <button class="save__table__button" onclick="SaveTable('table__upper')">Save Table</button>
                 </div>
             </div>
             <div class="left__block">
@@ -54,8 +56,9 @@
                     <button class="find__button" type="submit" onclick="Calculating()">Find...</button>
                 </div>
                 <div class="add__row">
-                    <img class="add__row__img" src="img/add.png" alt="" width="10%" onmouseover="AddTableRow('left__block__content')">
-                    <button class="save__table__button" onclick="SaveTable('left__block__content')">Save Table</button>
+                    <table class="table__left" id="table__left"></table>
+                    <img class="add__row__img" src="img/add.png" alt="" width="10%" onmouseover="AddTableRow('table__left')">
+                    <button class="save__table__button" onclick="SaveTable('table__left')">Save Table</button>
                 </div>
                 <div class="rectangle__square" id="rectangle__square"></div>
             </div>
@@ -76,13 +79,11 @@
                     </div>
                     <div class="content"></div>
                 </div>
-
                 <div class="add__row">
-                    <img class="add__row__img" src="img/add.png" alt="" width="50%" onmouseover="AddTableRow('left__block__content')">
-                    <button class="save__table__button" onclick="SaveTable('left__block__content')">Save Table</button>
+                    <table class="table__right" id="table__right"></table>
+                    <img class="add__row__img" src="img/add.png" alt="" width="50%" onmouseover="AddTableRow('table__right')">
+                    <button class="save__table__button" onclick="SaveTable('table__right')">Save Table</button>
                 </div>
-
-
             </div>
         </div>
 
@@ -90,8 +91,9 @@
     <footer class="footer">
         <div class="footer__text">Thanks for your attention!</div>
         <div class="add__row">
-            <img class="add__row__img" src="img/add.png" alt="" width="10%">
-            <button class="save__table__button">Save Table</button>
+            <table class="table__footer" id="table__footer"></table>
+            <img class="add__row__img" src="img/add.png" alt="" width="10%" onmouseover="AddTableRow('table__footer')">
+            <button class="save__table__button" onclick="SaveTable('table__footer')">Save Table</button>
         </div>
         <div class="footer__label" id="footer__label"><h1>Mew</h1></div>
     </footer>
