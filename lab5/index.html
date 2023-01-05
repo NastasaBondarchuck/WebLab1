@@ -9,7 +9,13 @@
 <div class="container">
     <header class="header">
         <div class="header__label" id="header__label"><h1>Cat Site</h1></div>
+        <div class="add__row">
+            <table class="table__header" id="table__header"></table>
+            <img class="add__row__img" src="img/add.png" alt="" width="10%" onmouseover="AddTableRow('table__header')">
+            <button class="save__table__button" onclick="SaveTable('table__header')">Save Table</button>
+        </div>
         <div class="header__text">Some information about cats...</div>
+
     </header>
     <main class="main">
         <div class="navigation__block">
@@ -19,11 +25,18 @@
                     <li> <a href="index.html">Main Page</a>  </li>
                 </ul>
             </div>
-
+            <div class="add__row">
+                <img class="add__row__img" src="img/add.png" alt="" width="50%" onmouseover="AddTableRow('navigation__block__content')">
+                <button class="save__table__button" onclick="SaveTable('navigation__block__content')">Save Table</button>
+            </div>
         </div>
         <div class="central__block">
             <div class="upper__block">
-                “One cat just leads to another.”<br/>Ernest Hemingway
+                <div class="upper__block__content">“One cat just leads to another.”<br/>Ernest Hemingway</div>
+                <div class="add__row">
+                    <img class="add__row__img" src="img/add.png" alt="" width="10%" onmouseover="AddTableRow('upper__block__content')">
+                    <button class="save__table__button" onclick="SaveTable('upper__block__content')">Save Table</button>
+                </div>
             </div>
             <div class="left__block">
                 <div class="left__block__content">
@@ -34,25 +47,52 @@
                         Domestic cats are valued by humans for companionship and their ability to kill rodents.
                         About 60 cat breeds are recognized by various cat registries.
                     </p>
-                    <div class="min__max">
-                        <input class="values__input" id="values__input" type="text"
-                                   placeholder="Enter 10 values (separated by gap)">
-                        <button class="find__button" type="submit" onclick="Calculating()">Find...</button>
-                    </div>
-<!--                    <div class="min__max__result" id="min__max__result">Min and Max numbers: none.</div>-->
+                </div>
+                <div class="min__max">
+                    <input class="values__input" id="values__input" type="text"
+                           placeholder="Enter 10 values (separated by gap)">
+                    <button class="find__button" type="submit" onclick="Calculating()">Find...</button>
+                </div>
+                <div class="add__row">
+                    <img class="add__row__img" src="img/add.png" alt="" width="10%" onmouseover="AddTableRow('left__block__content')">
+                    <button class="save__table__button" onclick="SaveTable('left__block__content')">Save Table</button>
                 </div>
                 <div class="rectangle__square" id="rectangle__square"></div>
             </div>
             <div class="right__block">
                 <div class="right__block__content">
-                    <img class="cat" src="img/cat2.png" alt="">
+                    <div class="bold__check">
+                        <textarea class="bold__text" id="bold__text" onfocus="MakeBold()" readonly>
+                            I’m not sure why I like cats so much.I mean, they’re really cute obviously.
+                            They are both wild and domestic at the same time.” – Michael Showalter
+                        </textarea>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="save__boldness" id="save__boldness" onclick="SaveBoldness()"> Save boldness
+                    </div>
+                    <div>
+                        <input type="radio" name="boldness__radio" id="normal__boldness"> Normal
+                        <input type="radio" name="boldness__radio" id="bold__boldness"> Bold
+                    </div>
+                    <div class="content"></div>
                 </div>
+
+                <div class="add__row">
+                    <img class="add__row__img" src="img/add.png" alt="" width="50%" onmouseover="AddTableRow('left__block__content')">
+                    <button class="save__table__button" onclick="SaveTable('left__block__content')">Save Table</button>
+                </div>
+
+
             </div>
         </div>
 
     </main>
     <footer class="footer">
         <div class="footer__text">Thanks for your attention!</div>
+        <div class="add__row">
+            <img class="add__row__img" src="img/add.png" alt="" width="10%">
+            <button class="save__table__button">Save Table</button>
+        </div>
         <div class="footer__label" id="footer__label"><h1>Mew</h1></div>
     </footer>
 </div>

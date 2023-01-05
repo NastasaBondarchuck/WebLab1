@@ -125,7 +125,17 @@ ul{
     border-left: 0;
     cursor: pointer;
 }
-.find__button:hover {
+.save__table__button{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 10px;
+    background: white;
+    color: #D4D4D4;
+    font-size: 12px;
+    border: 2px solid #D4D4D4;
+    cursor: pointer;
+}
+.find__button:hover, .save__table__button:hover{
     background: #D4D4D4;
     color: white;
 }
@@ -137,10 +147,22 @@ ul{
     grid-template: 1fr / 1fr;
 }
 .right__block__content{
-    margin: auto;
+    height: min-content;
 }
-.cat{
-    width: 100%;
+.bold__text{
+    margin: auto;
+    height: 200px;
+}
+.add__row{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.add__row__img{
+    margin-top: 8px;
+}
+.min__max, .rectangle__square{
+    margin: 20px;
 }
 
 @media (max-device-width: 800px) {
@@ -188,15 +210,9 @@ ul{
         padding: 10px 50px;
         font-size: 15px;
     }
-
-    .right__block__content{
+    .bold__text{
         margin: 0;
         display: grid;
         grid-template: 1fr / 1fr;
-    }
-    .cat{
-        width: 35%;
-        margin: auto;
-        grid-column: 2;
     }
 }
