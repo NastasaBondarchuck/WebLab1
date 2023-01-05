@@ -218,4 +218,13 @@ ul{
     .resize__img{
         width: 20%;
     }
+    .bold__text, .checkbox__boldness, .radio__boldness{
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .right__block__content{
+        padding-bottom: 20px;
+    }
 }
