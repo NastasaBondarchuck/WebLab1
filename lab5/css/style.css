@@ -215,4 +215,7 @@ ul{
         display: grid;
         grid-template: 1fr / 1fr;
     }
+    .resize__img{
+        width: 20%;
+    }
 }
