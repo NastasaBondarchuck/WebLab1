@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cat Site Mobile</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="css/animBlock.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <div class="header__label"><h1>Cat Site</h1></div>
+        <div class="header__text">Some information about cats...</div>
+    </header>
+    <main class="main">
+        <div class="navigation__block">
+            <div class="navigation__block__content">
+                <ul>
+                    <li class="navigation__label">Navigation</li>
+                    <li> <a href="index.html">Main Page</a>  </li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="central__block">
+            <div class="upper__block">
+                “One cat just leads to another.”<br/>Ernest Hemingway
+            </div>
+            <div class="left__block">
+                <div class="left__block__content" id="left__block__content">
+                    <button class="css__button" onclick="StartCss()">Start Css</button>
+                    <button class="canvas__button" onclick="StartCanvas()">Start Canvas</button>
+                    <div class="result" id="result"></div>
+                </div>
+                <div class="work" id="work__canvas">
+                    <div class="canvas__form">
+                        <div class="canvas__header">
+                            <div class="canvas__message" id="canvas__message">
+                                There will be name of the event.
+                            </div>
+                            <div class="canvas__controls">
+                                <button class="canvas__start, start__button" id="canvas__start" onclick="StartCanvasAnim()">Start</button>
+                                <button class="canvas__stop, stop__button" id="canvas__stop" onclick="StopCanvasAnim()">Stop</button>
+                                <button class="canvas__reload, reload__button" id="canvas__reload" onclick="ReloadCanvas()">Reload</button>
+                                <button class="canvas__close, close__button" id="canvas__close" onclick="CloseCanvas()">Close</button>
+                            </div>
+                        </div>
+                        <div class="canvas__anim" id="canvas__anim">
+                            <canvas class="canvas__animation" id="canvas" ></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="work" id="work__css">
+                    <div class="css__form">
+                        <div class="css__header">
+                            <div class="css__message" id="css__message">
+                                There will be name of the event.
+                            </div>
+                            <div class="css__controls">
+                                <button class="css__start, start__button" id="css__start" onclick="StartCssAnim()">Start</button>
+                                <button class="css__stop, stop__button" id="css__stop" onclick="StopCssAnim()">Stop</button>
+                                <button class="css__reload, reload__button" id="css__reload" onclick="ReloadCss()">Reload</button>
+                                <button class="css__close, close__button" id="css__close" onclick="CloseCss()">Close</button>
+                            </div>
+                        </div>
+                        <div class="css__anim" id="css__anim">
+                            <div class="square" id="square"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right__block">
+                <div class="right__block__content">
+                    <img class="cat" src="img/cat2.png" alt="">
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer class="footer">
+        <div class="footer__text">Thanks for your attention!</div>
+        <div class="footer__label"><h1>Mew</h1></div>
+    </footer>
+</div>
+<script src="js/js.js"></script>
+</body>
+</html>

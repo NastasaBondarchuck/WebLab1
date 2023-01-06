@@ -1,0 +1,60 @@
+.canvas__form, .css__form{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr;
+}
+.canvas__header, .css__header{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 3fr 2fr;
+}
+.start__button, .stop__button,
+.reload__button, .close__button{
+    padding: 10px;
+    background: white;
+    color: #D4D4D4;
+    font-size: 17px;
+    border: 2px solid #D4D4D4;
+    cursor: pointer;
+    margin: auto;
+    width: 100px;
+}
+.start__button:hover, .stop__button:hover,
+.reload__button:hover, .close__button:hover{
+    background: #D4D4D4;
+    color: white;
+}
+.canvas__controls, .css__controls{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+.canvas__message, .css__message{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.canvas__anim, .css__anim{
+    border-style: solid;
+    border-color: green;
+    border-width: 5px;
+}
+.canvas__anim{
+    background-image: url("/img/textureSmall.jpg");
+    display: grid;
+    grid-template: 1fr / 1fr;
+}
+.canvas__animation{
+    background: transparent;
+    margin: auto;
+}
+.square{
+    height: 10px;
+    width: 10px;
+    background-color: #000080;
+    position: absolute;
+}
+.css__anim{
+    background-image: url("/img/textureSmall.jpg");
+    position: relative;
+}
